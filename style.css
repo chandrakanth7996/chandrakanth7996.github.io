@@ -28,6 +28,7 @@ nav {
   align-items: center;
   width: 90%;
   margin: auto;
+  position: relative;
 }
 
 .logo {
@@ -39,7 +40,7 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.5s ease-in-out, padding 0.3s ease;
 }
 
 .nav-links li {
@@ -63,6 +64,7 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
   color: #fff;
+  z-index: 1100; /* stay above menu */
 }
 
 /* Hero Section */
@@ -338,15 +340,23 @@ footer {
 }
 
 @media (max-width: 768px) {
+  /* Hide logo on mobile */
+  .logo {
+    display: none;
+  }
+
+  /* Hamburger visible and stay right */
+  .hamburger {
+    display: block;
+    z-index: 1100;
+  }
+
   nav {
-    flex-direction: row;
+    justify-content: flex-end;
     position: relative;
   }
 
-  .hamburger {
-    display: block;
-  }
-
+  /* Nav links hidden by default */
   .nav-links {
     flex-direction: column;
     gap: 10px;
@@ -355,18 +365,23 @@ footer {
     width: 100%;
     background: #111;
     position: absolute;
-    top: 60px;
+    top: 100%; /* just below header */
     left: 0;
-    padding: 0 20px;
+    padding: 0; /* no padding initially */
     border-radius: 0 0 8px 8px;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+  }
+
+  /* Expand menu when active */
+  .nav-links.active {
+    max-height: 1000px; /* enough to fit all links */
+    padding: 10px 20px; /* padding applied when expanded */
   }
 
   .nav-links li {
     margin-left: 0;
-  }
-
-  .nav-links.active {
-    max-height: 500px;
+    padding: 10px 0;
+    text-align: center;
   }
 
   .hero-content {
