@@ -6,16 +6,25 @@
   <title>Chandrakanth | Portfolio</title>
   <meta name="description" content="Portfolio of Chandrakanth G - Java Fullstack Developer with 4 years of experience in Java, Spring Boot, Angular, Microservices.">
   <meta name="keywords" content="Java Fullstack, Spring Boot, Angular, Microservices, Developer, Portfolio">
+  
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
   <!-- Header / Navbar -->
   <header>
     <nav>
       <h1 class="logo">Chandrakanth G</h1>
+      
+      <!-- Hamburger Icon -->
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -55,58 +64,55 @@
 
   <!-- Skills Section -->
   <section id="skills" class="skills">
-  <h2>Skills</h2>
+    <h2>Skills</h2>
 
-  <div class="skills-category">
-    <h3>Fullstack</h3>
-    <div class="skills-grid">
-      <div class="skill-card">Java</div>
-      <div class="skill-card">Spring Boot</div>
-      <div class="skill-card">Angular</div>
-      <div class="skill-card">Microservices</div>
-      <div class="skill-card">RabbitMQ</div>
-      <div class="skill-card">SQL</div>
-      <div class="skill-card">NoSQL</div>
-      <div class="skill-card">TypeScript</div>
-      <div class="skill-card">HTML5</div>
-      <div class="skill-card">CSS3</div>
-      <div class="skill-card">Bootstrap</div>
-      <div class="skill-card">JavaScript</div>
+    <div class="skills-category">
+      <h3>Fullstack</h3>
+      <div class="skills-grid">
+        <div class="skill-card">Java</div>
+        <div class="skill-card">Spring Boot</div>
+        <div class="skill-card">Angular</div>
+        <div class="skill-card">Microservices</div>
+        <div class="skill-card">RabbitMQ</div>
+        <div class="skill-card">SQL</div>
+        <div class="skill-card">NoSQL</div>
+        <div class="skill-card">TypeScript</div>
+        <div class="skill-card">HTML5</div>
+        <div class="skill-card">CSS3</div>
+        <div class="skill-card">Bootstrap</div>
+        <div class="skill-card">JavaScript</div>
+      </div>
     </div>
-  </div>
 
-  <div class="skills-category">
-  <h3>Problem-Solving</h3>
-  <div class="skills-grid">
-    <div class="skill-card">Data Structures</div>
-    <div class="skill-card">Algorithms</div>
-    <div class="skill-card">OOP</div>
-  </div>
-  </div>
-
-
-  <div class="skills-category">
-    <h3>Testing</h3>
-    <div class="skills-grid">
-      <div class="skill-card">JUnit</div>
-      <div class="skill-card">Mockito</div>
-      <div class="skill-card">Playwright</div>
+    <div class="skills-category">
+      <h3>Problem-Solving</h3>
+      <div class="skills-grid">
+        <div class="skill-card">Data Structures</div>
+        <div class="skill-card">Algorithms</div>
+        <div class="skill-card">OOP</div>
+      </div>
     </div>
-  </div>
 
-  <div class="skills-category">
-    <h3>Tools & Others</h3>
-    <div class="skills-grid">
-      <div class="skill-card">Git</div>
-      <div class="skill-card">GitHub</div>
-      <div class="skill-card">Postman</div>
-      <div class="skill-card">Swagger</div>
-      <div class="skill-card">Agile</div>
+    <div class="skills-category">
+      <h3>Testing</h3>
+      <div class="skills-grid">
+        <div class="skill-card">JUnit</div>
+        <div class="skill-card">Mockito</div>
+        <div class="skill-card">Playwright</div>
+      </div>
     </div>
-  </div>
-</section>
 
-
+    <div class="skills-category">
+      <h3>Tools & Others</h3>
+      <div class="skills-grid">
+        <div class="skill-card">Git</div>
+        <div class="skill-card">GitHub</div>
+        <div class="skill-card">Postman</div>
+        <div class="skill-card">Swagger</div>
+        <div class="skill-card">Agile</div>
+      </div>
+    </div>
+  </section>
 
   <!-- Experience Section -->
   <section id="experience" class="experience">
@@ -162,20 +168,11 @@
   </section>
 
   <!-- Contact Section -->
-  <!-- <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>If you'd like to work together or just say hi 👋, feel free to reach out!</p><br>
-    <a href="mailto:chandrakanth7996@gmail.com" class="btn">Send Email</a> -->
   <section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <p>If you'd like to work together or just say hi 👋, feel free to reach out!</p>
-
-  <!-- Email visible -->
-  <p class="contact-email"><i class="fa-solid fa-envelope"></i> chandrakanth7996@gmail.com</p>
-  
-  <!-- Send Email Button -->
-  <a href="mailto:chandrakanth7996@gmail.com" class="btn">Send Email</a>
-
+    <h2>Contact Me</h2>
+    <p>If you'd like to work together or just say hi 👋, feel free to reach out!</p>
+    <p class="contact-email"><i class="fa-solid fa-envelope"></i> chandrakanth7996@gmail.com</p>
+    <a href="mailto:chandrakanth7996@gmail.com" class="btn">Send Email</a>
 
     <!-- Social Links -->
     <div class="social-links">
@@ -190,5 +187,15 @@
   <footer>
     <p>© 2025 Chandrakanth | Made with ❤️ and GitHub Pages</p>
   </footer>
+
+  <!-- JS for Hamburger -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
