@@ -144,6 +144,8 @@ section h2 {
   background: #fff;
   text-align: center;
 }
+/* Performance: Skip rendering for off-screen sections */
+section { content-visibility: auto; }
 
 .about p {
   max-width: 800px;
@@ -152,12 +154,14 @@ section h2 {
   margin-bottom: 20px;
 }
 
+.about { contain-intrinsic-size: 350px; }
+
 /* Skills Section */
 .skills {
   background: #f7f7f7;
   padding: 60px 20px;
 }
-
+.skills { contain-intrinsic-size: 1000px; }
 .skills-category {
   background: #fff;
   padding: 20px;
@@ -203,6 +207,7 @@ section h2 {
   background: #fff;
   padding: 60px 20px;
 }
+.experience { contain-intrinsic-size: 600px; }
 
 .exp-card {
   max-width: 900px;
@@ -250,6 +255,7 @@ section h2 {
   padding: 60px 20px;
   background: #f7f7f7;
 }
+.projects { contain-intrinsic-size: 400px; }
 
 .project-grid {
   display: grid;
@@ -282,6 +288,7 @@ section h2 {
   padding: 60px 20px;
   text-align: center;
 }
+.contact { contain-intrinsic-size: 350px; }
 
 .contact-email {
   font-size: 1.1rem;
