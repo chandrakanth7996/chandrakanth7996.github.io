@@ -303,6 +303,14 @@ nav {
 --------------------------------*/
 .certifications {
   background: #f7f7f7;
+  padding: 5rem 2rem;
+}
+
+.certifications h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: var(--primary);
 }
 
 .cert-grid {
@@ -316,15 +324,24 @@ nav {
 .cert-card {
   background: #fff;
   border-left: 4px solid var(--primary);
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .cert-card i {
   color: var(--primary);
-  margin-right: 8px;
+  font-size: 1.4rem;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
 /* ------------------------------
@@ -332,27 +349,58 @@ nav {
 --------------------------------*/
 .recognitions {
   background: #fff;
+  padding: 5rem 2rem;
+}
+
+.recognitions h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: var(--secondary);
 }
 
 .recognition-list {
   max-width: 900px;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .rec-card {
   background: #f7f7f7;
   border-left: 4px solid var(--secondary);
-  padding: 15px 20px;
-  margin: 15px 0;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .rec-card i {
   color: var(--secondary);
-  margin-right: 10px;
+  font-size: 1.4rem;
 }
+
+.rec-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .cert-grid, .recognition-list {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-card, .rec-card {
+    justify-content: flex-start;
+  }
+}
+
 
 /* ------------------------------
    CONTACT
